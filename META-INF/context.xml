@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<Context reloadable="true">
+<!--
+    maxActive: Allowed value of Max number of connections active at an instance.
+    maxIdle: Allowed value of max number of Idle connections at an instance.
+    maxWait: Max time(milli seconds) a connection can wait to become unavailable.
+
+    Set -1 for no limit.
+-->
+    <Resource name="jdbc/mysql_ebookshop" auth="Container" type="javax.sql.DataSource"
+        maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true"
+        username="myuser" password="Nikhil02" driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/ebookshop"/>
+</Context>

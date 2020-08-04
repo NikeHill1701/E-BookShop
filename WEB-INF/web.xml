@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+    xmlns = "http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web_app_3_0.xsd">
+
+    <resource-ref>
+        <description>DB Connection Pool</description>
+        <res-ref-name>jdbc/mysql_ebookshop</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <context-param>
+        <param-name>jdbcDriver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>databaseURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/ebookshop</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>myuser</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>Nikhil02</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>EntryServlet</servlet-name>
+        <servlet-class>mypkg.EntryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QueryServlet</servlet-name>
+        <servlet-class>mypkg.QueryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>mypkg.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>mypkg.CartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>mypkg.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>mypkg.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>mypkg.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddBooksServlet</servlet-name>
+        <servlet-class>mypkg.AddBooksServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EntryServlet</servlet-name>
+        <url-pattern>/start</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QueryServlet</servlet-name>
+        <url-pattern>/query</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBooksServlet</servlet-name>
+        <url-pattern>/addBooks</url-pattern>
+    </servlet-mapping>
+
+</web-app>

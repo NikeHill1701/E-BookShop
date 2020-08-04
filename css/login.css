@@ -1,0 +1,35 @@
+#outer {
+    background-color: lightgray;
+    margin-top: 100px;
+    margin-left: 400px;
+    padding: 0px;
+    width: 500px;
+}
+
+#loginForm {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    width: 400px;
+}
+
+.formEntry {
+    padding: 10px;
+}
+
+#legend {
+    font-size: large;
+    font-style: italic;
+    color: darkgreen;
+}
+
+label {
+    font-size: large;
+}
+
+.errorMessage {
+    color: red;
+    padding-top: 0px;
+    padding-left: 60px;
+}
