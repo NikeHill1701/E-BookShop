@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Catalogue</title>
+    <script src='scripts/addBooksValidator.js'></script>
+    <link href="css/addBooks.css" rel='stylesheet/css'>
+</head>
+<body>
+    <form id='addBooks' method='POST' action='/yaebookshop/addBooks'>
+        <fieldset>
+            <legend>Add Books</legend>
+            <table id='booksTable'>
+                <th>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Price</td>
+                    <td>Qty</td>
+                </th>
+                <tr>
+                    <td><input type='text' id='title' name='title'></td>
+                    <td><input type='text' id='author' name='author'></td>
+                    <td><input type='text' id='price' name='price'></td>
+                    <td><input type='number' id='qty' name='qty'></td>
+                </tr>
+            </table>
+            <input type='button' onclick=addColumn() value='Add Column'>&nbsp;
+            <input type='submit' value='Add'>&nbsp;<input type='reset' value='Reset'><br>
+        </fieldset>
+    </form>
+</body>
+</html>
